@@ -4,7 +4,7 @@
 
 import React, { version as ReactVersion } from 'react';
 
-import { createSearchClient } from '../../../../test/mock';
+import { createSearchClient } from '../../../../test/mock/index.js';
 import {
   InstantSearch,
   InstantSearchSSRProvider,
@@ -14,12 +14,13 @@ import {
   useSearchBox,
   version,
 } from 'react-instantsearch-hooks';
-import { getServerState } from '../getServerState';
+import { getServerState } from '../getServerState.js';
 
 import type {
   InstantSearchServerState,
   UseRefinementListProps,
 } from 'react-instantsearch-hooks';
+// eslint-disable-next-line import/extensions
 import type algoliasearch from 'algoliasearch/lite';
 
 type SearchClient = ReturnType<typeof algoliasearch>;
